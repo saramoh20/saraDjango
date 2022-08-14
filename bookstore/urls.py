@@ -4,6 +4,6 @@ from .import views
 urlpatterns = [
     path('dashboard', views.dashboard),
     path('books', views.books),
-    path('customer/<str:pk>', views.customer),
+    path('customers/<str:pk>', views.customer),
 
 ]

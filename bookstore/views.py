@@ -30,4 +30,4 @@ def books(request):
 
 def customer(request, pk):
     customer = Customer.objects.get(id=pk)
-    return (request, 'bookstore/customer.html')
+    return render(request, 'bookstore/customer.html')
