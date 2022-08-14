@@ -1,0 +1,75 @@
+
+
+<<!DOCTYPE html>
+{% comment %} {% extends 'bookstore/main.html' %} {% endcomment %}
+{% block content %}
+<h1>Dashbord</h1>
+{% endblock %}
+<html>
+     
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1 class="pt-5 pl-5">hi sara for here book</h1>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="cole">#</th>
+                        <th scope="cole">Name </th>
+                        <th scope="cole">email </th>
+                        <th scope="cole"> age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        {% for item in customers %}
+                        <tr>
+                            <th scope="row">{{ item.id }}</th>
+                            <td>{{item.name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.age}}</td>
+                        </tr>
+                        {% endfor %}
+                   
+                   
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        
+                        <th scope="cole">id </th>
+                        <th scope="cole">Customer </th>
+                        <th scope="cole">Book</th>
+                        <th scope="cole">Statues </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        {% for order in orders %}
+                        <tr>
+                            <th scope="row">{{ order.id }}</th>
+                            <td>{{order.customer}}</td>
+                            <td>{{order.book}}</td>
+                            <td>{{order.status}}</td>
+                        </tr>
+                        {% endfor %}
+                   
+                   
+                </tbody>
+            </table>
+
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
+

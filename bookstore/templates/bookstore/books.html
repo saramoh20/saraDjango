@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1 class="pt-5 pl-5">hi sara for here book</h1>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="cole">#</th>
+                        <th scope="cole">Name </th>
+                        <th scope="cole">Price </th>
+                        <th scope="cole">Authoname </th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        {% for item in book %}
+                        <tr>
+                            <th scope="row">{{ item.id }}</th>
+                            <td>{{item.name}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.authoname}}</td>
+                        </tr>
+                        {% endfor %}
+                   
+                   
+                </tbody>
+            </table>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
